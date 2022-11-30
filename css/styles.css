@@ -1,0 +1,396 @@
+/* FONTS */
+@font-face {
+    font-family: 'Raleway';
+    src: url(../fonts/raleway-regular-webfont.woff);
+
+}
+@font-face {
+    font-family: 'Raleway-Bold';
+    src: url(../fonts/raleway-bold-webfont.woff);
+}
+ @font-face {
+    font-family: 'Raleway-ExtraLight';
+    src: url(../fonts/raleway-extralight-webfont.woff);
+ }
+    html {
+        background-color: #020659;
+    
+     }
+      
+     body {
+        font-family: 'Raleway-Bold', sans-serif;
+        background-color: #FFF;
+        color: #fff;
+        display: block;
+        min-width: 375px;
+        max-width:834px;
+        margin: 0 auto;
+     }
+/* NAV */
+
+     nav ul {
+        list-style: none;
+     }
+
+     nav a {
+        color:#FFF;
+     }
+      
+     a {
+        text-decoration: none;
+     }
+      
+       
+     ul {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+        width: 834px;
+        background-color: #020659;
+        position: relative;
+        text-align: center;
+        padding: 40px;
+     }
+
+     #home2 {
+        font-size: 20pt;
+
+     }
+
+     label {
+        cursor: pointer;
+        display: inline-block;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+     }
+     label span {
+        background-color: #ffffff;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background-color .2s ease-out;
+        width: 18px;
+     }
+     label span:before, label span:after {
+        background: #ffffff;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+     }
+     label span:before {
+        top: 5px;
+     }
+     label span:after {
+        top: -5px;
+     }
+     input {
+        display: none;
+     }
+     input:checked ~ ul {
+        max-height: 500px;
+     }
+     input:checked ~ label span {
+        background: transparent;
+     }
+     input:checked ~ label span:before {
+        transform: rotate(-45deg);
+     }
+     input:checked ~ label span:after {
+        transform: rotate(45deg);
+     }
+     input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+        top: 0;
+     }
+/* HEADER */
+
+header {
+    padding-top: 60px;
+}
+
+
+/* BODY */
+
+     #smooth {
+        background-image: linear-gradient(to right, blue, black); 
+        padding: 25px; 
+
+     }
+      
+     h1 {
+        font-size: 22pt;
+     }
+      
+     h1, h2, h3 {
+        font-family: 'Raleway-Bold';
+        text-transform: uppercase;
+     }
+      
+     h2, h3 {
+        font-size: 20pt;
+        color:#590242;
+        line-height: 2em;
+     }
+       
+    header h1 {
+        margin: 0 25px 0 25px;
+    }
+
+    header p {
+        font-family: Raleway;
+        font-size: 11pt;
+        margin: 20px;
+    } 
+
+     dl {
+        display: flex;
+     }
+      
+     dt {
+        padding-right: 5px;
+     }
+      
+     audio {
+        position: absolute;
+        bottom: 150px;
+        left: 5px;
+     }
+     .more {
+        text-decoration: none;
+        background-color:#590242;
+        color:#FFF;
+        border-radius: 5px;
+        padding: 10px;
+        width: 150px;
+        display: block;
+        text-align: center;
+        margin: 10px 0 30px 32px;
+     }
+      
+     .more:hover{
+        background-color: #020659;
+     }
+      
+     audio::-webkit-media-controls-mute-button {
+     background-color: #FFF;
+     border-radius: 50%;
+     }
+     audio::-webkit-media-controls-play-button {
+        background-color: #FFF;
+        border-radius: 50%;
+     }
+     audio::-webkit-media-controls-enclosure {
+        background-color:rgba(255, 255, 255, .5);
+     }
+    /* TRENDING */
+
+    #trending {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #trending h3 {
+        font-family: 'Raleway-Bold';
+        font-size: 16pt;
+        color: #590242;
+     }
+      
+     #trending ::-webkit-scrollbar {
+        width: 15px;
+     }
+     #trending ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 15px #590242;
+     }
+     #trending ::-webkit-scrollbar-thumb {
+        background: #590242;
+        border-radius: 5px;
+     }
+     #trending ::-webkit-scrollbar-thumb:hover {
+     background: #020659;
+     }
+
+/* PLAYLISTS */
+
+#playlists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+    #playlists h3, #curated h3  {
+        font-family: 'Raleway-Bold';
+        font-size: 16pt;
+        color: #FFF;
+    }
+    
+    #playlists p, #curated h3 {
+        font-family: 'Raleway';
+    
+    }
+    #playlists {
+    background-color: #2699FB;
+    }
+     #playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+        width: 15px;
+     }
+     #playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+        box-shadow: inset 0 0 15px #020659;
+     }
+     #playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+        background: #020659;
+        border-radius: 5px;
+     }
+     #playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+        background: #fff;
+     }
+      
+      
+    /* CURATED */
+    #curated {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color:  #030A8C;
+     }
+
+    /* FOOTER */
+     footer {
+        font-family: 'Raleway-Bold';
+        font-size: 10pt; 
+        color:#590242;
+        text-align: center;
+     }
+    
+      
+     /* RESPONSIVE */
+
+     @media screen and (min-width:834px) {
+        ul {
+            overflow: visible;
+            position: absolute;
+            top: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-column-start: 1;
+            grid-column-end: 5;
+            z-index: 100;
+            background-color:#020659;
+            margin: 0 auto;
+            position: absolute;
+        }
+        label span, input {
+            display: none;
+       }
+      
+       #smooth {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+       
+       .scroll {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        overflow-x: auto;
+        overflow-y: hidden;
+     }
+      
+     .scroll section {
+        margin: 10px;
+        position: relative;
+     }
+      
+     .scroll div {
+        position: absolute;
+        top: 251px;
+        background-color: rgba(255, 255, 255, .75);
+        padding: 5px;
+        height: 50px;
+        width: 350px;
+     }
+
+     #trending {
+        grid-column-start: 1;
+        grid-column-end: 4;
+       }
+    
+       #playlists {
+        grid-column-start: 1;
+        grid-column-end: 3;
+       }
+    
+       #curated {
+        grid-column-start: 3;
+        grid-column-end: 4;
+       }
+
+    }
+    
+    /* MOBILE SIZE */
+
+    @media screen and (min-width: 375px) {
+
+        ul {
+            overflow: visible;
+            position: absolute;
+            top: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-column-start: 1;
+            grid-column-end: 5;
+            z-index: 100;
+            background-color:#020659;
+            margin: 0 auto;
+            position: absolute;
+        }
+        label span, input {
+            display: none;
+       }
+      
+       #smooth {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+       
+       .scroll {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        overflow-x: auto;
+        overflow-y: hidden;
+     }
+      
+     .scroll section {
+        margin: 10px;
+        position: relative;
+     }
+      
+     .scroll div {
+        position: absolute;
+        top: 251px;
+        background-color: rgba(255, 255, 255, .75);
+        padding: 5px;
+        height: 50px;
+        width: 350px;
+     }
+
+     #trending {
+        grid-column-start: 1;
+        grid-column-end: 4;
+       }
+    
+       #playlists {
+        grid-column-start: 1;
+        grid-column-end: 3;
+       }
+    
+       #curated {
+        grid-column-start: 3;
+        grid-column-end: 5;
+       }
+
+
+    }
+
+   
